@@ -1,0 +1,105 @@
+.container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    height: 600px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: #363062;
+    gap: 5px;
+    padding: 10px;
+
+    @media (max-width: 768px) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.output{
+    font-family: 'Space Mono', monospace;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.prev{
+    line-height:1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 2.5rem;
+    color: rgb(149, 146, 146);
+}
+.curr{
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 3rem;
+    color: #fff;
+}
+
+input:focus{
+    outline: none;
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.4rem 1rem;
+    border: none;
+    background-color: #D8B9C3;
+    color: black;
+    cursor: pointer;
+    font-weight: lighter;
+    transition: all ease-in-out 0.2s;
+    border-radius: 15px;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+.ac {
+    grid-column: 1 / span 2;
+}
+.operators-h{
+    background-color: #4D4C7D;
+    border: 1px solid #4D4C7D;
+    color: white;
+    border-radius: 15px;
+}
+
+.operators-v{
+    background-color: #827397;
+    border: 1px solid #9181a7;
+    color: white;
+    border-radius: 15px;
+}
+
+.equal{
+    grid-column: 3 / span 2;
+    background-color: #543864;
+    border-radius: 15px;
+    color: white;
+    border: none;
+}
